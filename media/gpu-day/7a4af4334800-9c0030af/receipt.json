@@ -1,0 +1,80 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "gpu-day",
+ "kind": "figure",
+ "title": "A day of the GPU",
+ "hook": "Every minute of yesterday's GPU lease: who held it, and why it sat idle when it did.",
+ "commit": "7a4af433480082f2a4352b95f7724573f4696544",
+ "watched_commit": "492183c703950e0a487ee45175389bd37aa11502",
+ "dirty": false,
+ "spec": "showcases/gpu-day.toml",
+ "spec_sha256": "31bf7e55c142ad7658c46dec2590ac23e870c16e8d11018380ad2aa1229bad1a",
+ "ran_at": "2026-11-09T18:28:25",
+ "credits": [
+  "lf-tooling: timeline (#918)",
+  "the lease log every lane writes"
+ ],
+ "numbers": {
+  "busy_pct": {
+   "label": "GPU busy",
+   "value": 65.4,
+   "unit": "%",
+   "source": "timeline 2026-11-08"
+  },
+  "turns": {
+   "label": "GPU turns",
+   "value": 155,
+   "unit": "",
+   "source": "timeline 2026-11-08"
+  },
+  "idle_h": {
+   "label": "GPU idle",
+   "value": 8.3,
+   "unit": "h",
+   "source": "timeline 2026-11-08"
+  },
+  "idle.RAM-blocked": {
+   "label": "idle: RAM-blocked",
+   "value": 4.11,
+   "unit": "h",
+   "source": "timeline 2026-11-08, 18 gaps"
+  },
+  "idle.no gpu demand": {
+   "label": "idle: no gpu demand",
+   "value": 2.51,
+   "unit": "h",
+   "source": "timeline 2026-11-08, 15 gaps"
+  },
+  "idle.waiter queued": {
+   "label": "idle: waiter queued",
+   "value": 1.36,
+   "unit": "h",
+   "source": "timeline 2026-11-08, 4 gaps"
+  },
+  "cpu_held_ram_blocked": {
+   "label": "cpu lease held while RAM-blocked",
+   "value": 96,
+   "unit": "%",
+   "source": "timeline 2026-11-08; other idle time 74%"
+  }
+ },
+ "media": {
+  "gpu-day.svg": {
+   "sha256": "0435f4c0880c0c3c503ce0e5ef38d5b5cfa64d782741755e3107446bb6596f8c",
+   "bytes": 20889
+  },
+  "timeline/trace.json": {
+   "sha256": "26d0570a6e0d0b99e362087c0ecb34f1a93dea7640747c65236ddb58a02d30fb",
+   "bytes": 1000047
+  }
+ },
+ "thumb": "gpu-day.svg",
+ "pages": [
+  "timeline/timeline.html"
+ ],
+ "state_hash": "46693cef032cffc2",
+ "runner": "timeline",
+ "subject": "2026-11-08",
+ "lease": "light where timed",
+ "timing_s": 2.61
+}

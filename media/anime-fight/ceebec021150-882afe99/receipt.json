@@ -1,0 +1,65 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "anime-fight",
+ "kind": "unreal",
+ "title": "Kiri fights in the anime look",
+ "hook": "Kiri's combo, skill, dodge and ultimate with AnimeLook shading and KawaiiPhysics, captured offscreen frame by frame.",
+ "commit": "ceebec021150fd2af5b3c44facc581af669d777d",
+ "watched_commit": "27b3503e6c8aa942452dd5d0db95e6c92307d9cf",
+ "spec": "E:\\Lumenfold-wt\\world-3d\\showcases\\anime-fight.toml",
+ "spec_sha256": "785349da7d4e64c37f3c94d3e74563194877e1e75ec3fd828b4fd4150c3ac80a",
+ "source": {
+  "drive": "tools/drive_anime_fight.txt",
+  "map": "",
+  "args": "-LWFresh -UseFixedTimeStep -FPS=30",
+  "timeout_s": 900,
+  "res": [
+   1280,
+   720
+  ]
+ },
+ "job": "",
+ "lane": "world-3d",
+ "ran_at": "2026-11-09T18:45:08",
+ "play_s": 75.6,
+ "game_exit": "0",
+ "swarm_hash": "",
+ "movie_frames": 330,
+ "complete": true,
+ "missing": [],
+ "numbers": {
+  "moves": {
+   "label": "moves performed",
+   "value": 9,
+   "unit": ""
+  }
+ },
+ "credits": [
+  "lf-anime-look AnimeLook and ink",
+  "KawaiiPhysics",
+  "lf-characters-3d Kiri",
+  "#755 offscreen capture"
+ ],
+ "media": {
+  "movie.gif": {
+   "sha256": "3eafb4bb2e2b6d16dad5de440583516b84c49c01f03c6fde132cbd41e1ceee06",
+   "bytes": 15079603
+  },
+  "movie.webm": {
+   "sha256": "b7d833e814b66316b0be3086030c28858c43ce6d45e5acbf48d83278cbb2cb18",
+   "bytes": 5610455
+  },
+  "numbers.json": {
+   "sha256": "643eab5ff12616bf8c08c520ac71f24537f824fd421c3432f89cf772cf6ae96d",
+   "bytes": 81
+  },
+  "poster.png": {
+   "sha256": "8a1578d20ba4e3fe8b3fa1a56e57c82d5fea0928bfa23527e0b0a46d7c7ee8de",
+   "bytes": 1002274
+  },
+  "run.log": {
+   "sha256": "ce5eb03ae2c8697c0e95cee8f121a8842f40cbcc4c2f7884e5fdb442bc84b120",
+   "bytes": 1160
+  }
+ }
+}

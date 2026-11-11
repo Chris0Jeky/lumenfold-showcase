@@ -1,0 +1,106 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "m2-break",
+ "kind": "unreal",
+ "title": "One blade, five props, in sweep order",
+ "hook": "A blade swept through the hitbox core breaks five props in the order it reaches them, inside a 20k swarm ring; then the slime splits.",
+ "commit": "ceebec021150fd2af5b3c44facc581af669d777d",
+ "watched_commit": "c8c40ebfed2ba467bdb1cbe1f3015231b5fdd656",
+ "spec": "E:\\Lumenfold-wt\\world-3d\\showcases\\m2-break.toml",
+ "spec_sha256": "32b81e34e0eb3b1347264c1f598ee520fbac2fd9f6ef62d56e5f48841108d932",
+ "source": {
+  "drive": "tools/drive_m2.txt",
+  "map": "/Game/Maps/L_SystemsLab",
+  "args": "-LWFresh -UseFixedTimeStep -FPS=30",
+  "timeout_s": 900,
+  "res": [
+   1280,
+   720
+  ]
+ },
+ "job": "",
+ "lane": "world-3d",
+ "ran_at": "2026-11-09T18:42:12",
+ "play_s": 146.4,
+ "game_exit": "0",
+ "swarm_hash": "d298a260ddcc77e1",
+ "movie_frames": 176,
+ "complete": true,
+ "missing": [],
+ "numbers": {
+  "props_hit": {
+   "label": "props hit by the blade",
+   "value": 5.0,
+   "unit": ""
+  },
+  "broken": {
+   "label": "props broken",
+   "value": 5.0,
+   "unit": ""
+  },
+  "hitbox_ms": {
+   "label": "hitbox core per step (mean)",
+   "value": 0.183,
+   "unit": "ms"
+  },
+  "blobs": {
+   "label": "slime blobs after the split",
+   "value": 2.0,
+   "unit": ""
+  },
+  "step_p99": {
+   "label": "20k swarm step p99 through the break",
+   "value": 1.58,
+   "unit": "ms"
+  },
+  "frame_p50_samples": {
+   "label": "samples",
+   "value": 420,
+   "unit": "frames"
+  },
+  "frame_p50": {
+   "label": "frame p50 (20k ring, no capture)",
+   "value": 12.548,
+   "unit": "ms"
+  },
+  "frame_p99_samples": {
+   "label": "samples",
+   "value": 420,
+   "unit": "frames"
+  },
+  "frame_p99": {
+   "label": "frame p99 (20k ring, no capture)",
+   "value": 28.0257,
+   "unit": "ms"
+  }
+ },
+ "credits": [
+  "A01 hitbox core",
+  "#811 destruction and slime adapters",
+  "#866 lab staging",
+  "#895 M2 drive",
+  "#911 lab swing"
+ ],
+ "media": {
+  "movie.gif": {
+   "sha256": "6a5ee6f896db9e4e846e894c5505e0a54b51d9b146a294170ec638cc08f1fbe2",
+   "bytes": 20622284
+  },
+  "movie.webm": {
+   "sha256": "001e85ea4499d230258bfad3492e040ff2a2165ade794e7080abd90dfae7fa91",
+   "bytes": 10636343
+  },
+  "numbers.json": {
+   "sha256": "3ecb01543c0c694c7a3e5753ef750b85a1dad2eb0edf1e3a1dcbd4117e5b5232",
+   "bytes": 864
+  },
+  "poster.png": {
+   "sha256": "5baf97135b1d4eb46badb14794e1bf10974ca80fe4eda4115838acd086a5de33",
+   "bytes": 1731005
+  },
+  "run.log": {
+   "sha256": "6e3172ad4e895c922fac68f8235d04040ff79a2817b877b7e90e1a79bf2aad3f",
+   "bytes": 2345
+  }
+ }
+}

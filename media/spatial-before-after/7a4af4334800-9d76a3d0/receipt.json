@@ -1,0 +1,108 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "spatial-before-after",
+ "kind": "standalone",
+ "title": "Spatial queries before and after the SIMD rewrite",
+ "hook": "The packed SIMD rewrite of radius queries (#731), on the benchmarked workload: the same answers frame for frame, and the bench store's before and after.",
+ "commit": "7a4af433480082f2a4352b95f7724573f4696544",
+ "watched_commit": "7a4af433480082f2a4352b95f7724573f4696544",
+ "dirty": false,
+ "spec": "showcases/spatial-before-after.toml",
+ "spec_sha256": "42fbecf70c77384afd5bd0724698ffd9d8f9f966449f22bb8381b78427fe5a4b",
+ "ran_at": "2026-11-09T18:28:33",
+ "credits": [
+  "lf-engine: spatial index SYS-B01 and the Astra SIMD passes (#731)",
+  "lf-tooling: viz compare (#905)"
+ ],
+ "numbers": {
+  "frames": {
+   "label": "frames rendered",
+   "value": 150,
+   "unit": "",
+   "source": "viz"
+  },
+  "render_s": {
+   "label": "render time",
+   "value": 2.095,
+   "unit": "s",
+   "source": "viz on this machine, including any probe build",
+   "volatile": true
+  },
+  "identical_frames": {
+   "label": "frames identical to the code before #731",
+   "value": 150,
+   "unit": "of 150",
+   "source": "viz compare, 08ae337232acd8d8dd83599acf222c3c19528958^1 (ef3c56db) vs working tree"
+  },
+  "spatial.step.radius.n5000.d8.after": {
+   "label": "spatial.step.radius.n5000.d8 now",
+   "value": 1336.05,
+   "unit": "\u00b5s",
+   "source": "bench store, commit b6d3f493",
+   "noise": "\u00b11.0% MAD"
+  },
+  "spatial.step.radius.n5000.d8.before": {
+   "label": "spatial.step.radius.n5000.d8 before",
+   "value": 3626.3,
+   "unit": "\u00b5s",
+   "source": "bench store, commit 5abc5e9d"
+  },
+  "spatial.step.radius.n5000.d8.speedup": {
+   "label": "spatial.step.radius.n5000.d8 speedup",
+   "value": 2.71,
+   "unit": "x",
+   "source": "before / now; gate.py margin real"
+  },
+  "spatial.step.radius.n20000.d8.after": {
+   "label": "spatial.step.radius.n20000.d8 now",
+   "value": 6017.0,
+   "unit": "\u00b5s",
+   "source": "bench store, commit b6d3f493",
+   "noise": "\u00b10.8% MAD"
+  },
+  "spatial.step.radius.n20000.d8.before": {
+   "label": "spatial.step.radius.n20000.d8 before",
+   "value": 15855.3,
+   "unit": "\u00b5s",
+   "source": "bench store, commit 5abc5e9d"
+  },
+  "spatial.step.radius.n20000.d8.speedup": {
+   "label": "spatial.step.radius.n20000.d8 speedup",
+   "value": 2.64,
+   "unit": "x",
+   "source": "before / now; gate.py margin real"
+  }
+ },
+ "media": {
+  "viz/anim.webm": {
+   "sha256": "fef037be9b7343aa19881fad92aa011e67bdcad38ae14ec08c608aa427b15359",
+   "bytes": 6029934
+  },
+  "viz/anim.png": {
+   "sha256": "0c9ebe6e2876a080520d294c34b3c06ea3dc71fe1d546498fec6996f4ce2d6f9",
+   "bytes": 3631825
+  },
+  "viz/strip.png": {
+   "sha256": "31e118a90487c8aef884cc2156980e9fd9e5ec9b885385818834edd24e9835d6",
+   "bytes": 973335
+  },
+  "viz/frame-last.svg": {
+   "sha256": "2588158b8d08b01411135f2d06f7fd78edb9801cdd2b1772c55d3aff8e57528d",
+   "bytes": 278640
+  },
+  "compare/overlay.png": {
+   "sha256": "c7b41907ec7c52d68ee7471439ad905984f9e39e140cde6b92099f974429167f",
+   "bytes": 295456
+  }
+ },
+ "thumb": "thumb.png",
+ "pages": [
+  "viz/index.html",
+  "compare/compare.html"
+ ],
+ "state_hash": "b79572e5ed509bb4",
+ "runner": "viz",
+ "subject": null,
+ "lease": "light where timed",
+ "timing_s": 8.31
+}

@@ -1,0 +1,92 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "swarm-lod-tiers",
+ "kind": "standalone",
+ "title": "Swarm LOD tiers: exact near the camera, cheap far away",
+ "hook": "6000 agents on three LOD tiers that follow two focus points: exact separation near them, Verlet lists in the middle, a density push far out, and no agent ever jumps at a hand-off.",
+ "commit": "625ad8fd9c366a325e4b75b97450184cce4e6d92",
+ "watched_commit": "9091e0fade02013630be8b86151fafd6e6a30609",
+ "dirty": true,
+ "spec": "showcases/swarm-lod-tiers.toml",
+ "spec_sha256": "c830cd8a014c45d1440ae133984ef5ecf31cdd1d1c4075ee68dbc0e0907bad59",
+ "ran_at": "2026-11-09T19:35:03",
+ "credits": [
+  "lf-engine: significance core (#847), swarm LOD tiers (#856), serial passes (#945, #949)"
+ ],
+ "numbers": {
+  "frames": {
+   "label": "frames rendered",
+   "value": 240,
+   "unit": "",
+   "source": "viz"
+  },
+  "render_s": {
+   "label": "render time",
+   "value": 5.04,
+   "unit": "s",
+   "source": "viz on this machine, including any probe build",
+   "volatile": true
+  },
+  "verified": {
+   "label": "frames verified against the core hash",
+   "value": 240,
+   "unit": "",
+   "source": "viz"
+  },
+  "swarm.lod.step.n10000.t8.after": {
+   "label": "swarm.lod.step.n10000.t8 now",
+   "value": 835.5,
+   "unit": "\u00b5s",
+   "source": "bench store, commit dd62fd7a",
+   "noise": "\u00b10.0% MAD"
+  },
+  "swarm.lod.allfull.exact.n10000.t8.after": {
+   "label": "swarm.lod.allfull.exact.n10000.t8 now",
+   "value": 945.35,
+   "unit": "\u00b5s",
+   "source": "bench store, commit dd62fd7a",
+   "noise": "\u00b10.0% MAD"
+  },
+  "swarm.lod.grid_rebuild.n10000.after": {
+   "label": "swarm.lod.grid_rebuild.n10000 now",
+   "value": 83.94,
+   "unit": "\u00b5s",
+   "source": "bench store, commit dd62fd7a",
+   "noise": "\u00b10.0% MAD"
+  },
+  "swarm.lod.significance.n10000.after": {
+   "label": "swarm.lod.significance.n10000 now",
+   "value": 91.84,
+   "unit": "\u00b5s",
+   "source": "bench store, commit dd62fd7a",
+   "noise": "\u00b10.0% MAD"
+  }
+ },
+ "media": {
+  "viz/anim.webm": {
+   "sha256": "1827700f966abb40afa79cd2c1144bf47004370e79232f73776e3e02ab917343",
+   "bytes": 5709694
+  },
+  "viz/anim.png": {
+   "sha256": "771e5fe652b923f924b407f7844ae4435edc5ecf5fa9ae3acfc6eb6d6f6204c5",
+   "bytes": 3102517
+  },
+  "viz/strip.png": {
+   "sha256": "0f58142d47dbe8b2ba50b3418e39dd389fc6b9196cdb553254bab77a5fb369dc",
+   "bytes": 677059
+  },
+  "viz/frame-last.svg": {
+   "sha256": "174105d08fd1f2057b13c5df59ff65cb85cd7605f647d40cf85d04d581dfada0",
+   "bytes": 705533
+  }
+ },
+ "thumb": "thumb.png",
+ "pages": [
+  "viz/index.html"
+ ],
+ "state_hash": "717f0a40470420c0",
+ "runner": "viz",
+ "subject": null,
+ "lease": "light where timed",
+ "timing_s": 5.7
+}
