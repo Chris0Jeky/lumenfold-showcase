@@ -1,0 +1,59 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "slime-split",
+ "kind": "standalone",
+ "title": "Slime splits and merges",
+ "hook": "Five XPBD blobs fall onto the ground: one is cut in two mid-air, and two land against each other and merge.",
+ "commit": "7a4af433480082f2a4352b95f7724573f4696544",
+ "watched_commit": "9d35cfa90394960ba27cdda713ffcda8fe9af12e",
+ "dirty": false,
+ "spec": "showcases/slime-split.toml",
+ "spec_sha256": "4a9157acdc6534fc72c54aaf7c48255e0cf93efbc2c4adfe4746c6540613f73d",
+ "ran_at": "2026-11-09T18:28:22",
+ "credits": [
+  "lf-3d-quality: softbody core SYS-C03 (XPBD, split and merge)",
+  "lf-tooling: viz (#905)"
+ ],
+ "numbers": {
+  "frames": {
+   "label": "frames rendered",
+   "value": 240,
+   "unit": "",
+   "source": "viz"
+  },
+  "render_s": {
+   "label": "render time",
+   "value": 1.037,
+   "unit": "s",
+   "source": "viz on this machine, including any probe build",
+   "volatile": true
+  }
+ },
+ "media": {
+  "viz/anim.webm": {
+   "sha256": "a04225b4216b8874fb12896b109da4bb74f6dee854e47f6a23ec3f5b64a50d7c",
+   "bytes": 839851
+  },
+  "viz/anim.png": {
+   "sha256": "2ab05d96080dee34af885ff7b39ca13127e64fe27af91beb342f7edf5fe0028b",
+   "bytes": 583274
+  },
+  "viz/strip.png": {
+   "sha256": "c8ad0812e22339f2aaf1ec0765070d6c697a5adac82bddcb1f85e7715b028dcc",
+   "bytes": 230376
+  },
+  "viz/frame-last.svg": {
+   "sha256": "5bb4cd80790e8d05aa43a0fe12cf38e1ca0edfaea46e162f93a0a2e6fdeb4e4c",
+   "bytes": 45669
+  }
+ },
+ "thumb": "thumb.png",
+ "pages": [
+  "viz/index.html"
+ ],
+ "state_hash": "c5d86d568359109a",
+ "runner": "viz",
+ "subject": null,
+ "lease": "light where timed",
+ "timing_s": 1.16
+}

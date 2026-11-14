@@ -1,0 +1,55 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "dots-palette-spread",
+ "kind": "figure",
+ "title": "The palette check that would have caught batch 01",
+ "hook": "The owner rejected Dots batch 01 by eye; one number would have flagged it first: its hue spread against the style references, beside the batches the owner kept.",
+ "commit": "9b5341ebdb9c5c51a818ecb1fa2df7c6086b2197",
+ "watched_commit": "ecabcb28d0ef775021ccd4903b6ade2d3cdda3cb",
+ "dirty": true,
+ "spec": "showcases/dots-palette-spread.toml",
+ "spec_sha256": "248cadf8b3550fa1a71c4c8156528602de9288baf9e8e897176a2fd673f58377",
+ "ran_at": "2026-11-09T19:33:42",
+ "credits": [
+  "lf-style: palette-spread check (#692), owner verdict on batch 01"
+ ],
+ "numbers": {
+  "ratio.batch-01-characters-rejected": {
+   "label": "batch 01 characters (rejected): spread over references",
+   "value": 0.378,
+   "unit": "",
+   "source": "100 images, floor 0.6"
+  },
+  "ratio.pilot-02": {
+   "label": "pilot 02: spread over references",
+   "value": 0.966,
+   "unit": "",
+   "source": "20 images, floor 0.6"
+  },
+  "ratio.b04-portraits": {
+   "label": "b04 portraits: spread over references",
+   "value": 0.943,
+   "unit": "",
+   "source": "64 images, floor 0.6"
+  },
+  "flagged": {
+   "label": "batches under the floor",
+   "value": 1,
+   "unit": "",
+   "source": "of 3"
+  }
+ },
+ "media": {
+  "palette-spread.svg": {
+   "sha256": "c9706e5d0c79eb4cb2130372bc34d3ed205da05b4dc3104bf118b8da73eb5223",
+   "bytes": 1843
+  }
+ },
+ "thumb": "palette-spread.svg",
+ "pages": [],
+ "state_hash": "b7e9f05ed48409d8",
+ "runner": "palette",
+ "subject": "3 batches",
+ "lease": "light where timed",
+ "timing_s": 7.76
+}

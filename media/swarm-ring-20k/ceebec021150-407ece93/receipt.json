@@ -1,0 +1,105 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "swarm-ring-20k",
+ "kind": "unreal",
+ "title": "20,000 agents ring the party",
+ "hook": "A 20k swarm closes into surround rings round the party on a 2 ms step budget, eight worker threads, one flow field.",
+ "commit": "ceebec021150fd2af5b3c44facc581af669d777d",
+ "watched_commit": "c8c40ebfed2ba467bdb1cbe1f3015231b5fdd656",
+ "spec": "E:\\Lumenfold-wt\\world-3d\\showcases\\swarm-ring-20k.toml",
+ "spec_sha256": "96a90e9a6d35472e6aff68e2e4c36b30a8cb4e07073d9c208f24a7c306b42854",
+ "source": {
+  "drive": "tools/drive_m2.txt",
+  "map": "/Game/Maps/L_SystemsLab",
+  "args": "-LWFresh -UseFixedTimeStep -FPS=30",
+  "timeout_s": 900,
+  "res": [
+   1280,
+   720
+  ]
+ },
+ "job": "",
+ "lane": "world-3d",
+ "ran_at": "2026-11-09T18:42:12",
+ "play_s": 146.4,
+ "game_exit": "0",
+ "swarm_hash": "6485ba032cbef42f",
+ "movie_frames": 300,
+ "complete": true,
+ "missing": [],
+ "numbers": {
+  "agents": {
+   "label": "agents",
+   "value": 20000.0,
+   "unit": ""
+  },
+  "step_p50": {
+   "label": "swarm step p50",
+   "value": 1.251,
+   "unit": "ms"
+  },
+  "step_p99": {
+   "label": "swarm step p99 (budget 2 ms)",
+   "value": 2.145,
+   "unit": "ms"
+  },
+  "frame_p50_samples": {
+   "label": "samples",
+   "value": 420,
+   "unit": "frames"
+  },
+  "frame_p50": {
+   "label": "frame p50",
+   "value": 12.548,
+   "unit": "ms"
+  },
+  "frame_p99_samples": {
+   "label": "samples",
+   "value": 420,
+   "unit": "frames"
+  },
+  "frame_p99": {
+   "label": "frame p99",
+   "value": 28.0257,
+   "unit": "ms"
+  }
+ },
+ "credits": [
+  "#702 spatial index",
+  "#714 swarm core",
+  "#731 SIMD index",
+  "#820 swarm adapter",
+  "#823 surround rings",
+  "#859 flow-field build"
+ ],
+ "media": {
+  "LW_m2_closing.png": {
+   "sha256": "cb058abf903b4a847b5461c6a079945f6d6e03df4d8240e9780e47b7989b946f",
+   "bytes": 1735352
+  },
+  "LW_m2_ring.png": {
+   "sha256": "610187429e591027c56253fb68238573b761b3411ad3f45a1ecdf7ef6bac6de7",
+   "bytes": 1754457
+  },
+  "movie.gif": {
+   "sha256": "c61f3f4ff7fc04f649bc67bbff3f8be9e8b2d6924dc9afc926113a266797ea0e",
+   "bytes": 26233160
+  },
+  "movie.webm": {
+   "sha256": "7e8a53dad0e525b3731e1986e0231ac25437c8a1e80860ebf05a5e8c4b06c1c9",
+   "bytes": 18621156
+  },
+  "numbers.json": {
+   "sha256": "228858596a3e0241aca8143fb174cb4194fd9aad8bd7b0fac60df33e7f044979",
+   "bytes": 612
+  },
+  "poster.png": {
+   "sha256": "cab9d24442687f06738a4a2c406c29da135acb847485849f263fbef346401c31",
+   "bytes": 1274027
+  },
+  "run.log": {
+   "sha256": "6e3172ad4e895c922fac68f8235d04040ff79a2817b877b7e90e1a79bf2aad3f",
+   "bytes": 2345
+  }
+ }
+}

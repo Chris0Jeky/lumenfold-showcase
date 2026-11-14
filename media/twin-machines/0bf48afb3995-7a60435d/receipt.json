@@ -1,0 +1,61 @@
+{
+ "schema": "lumen-showcase-receipt/1",
+ "id": "twin-machines",
+ "kind": "figure",
+ "title": "Twin machines: the same city, byte for byte",
+ "hook": "Economy runs recorded on a Linux server re-run on this Windows desktop with a different Python, and every event log comes out byte-identical.",
+ "commit": "0bf48afb3995479d5f434ddc5809a278f6d38f6a",
+ "watched_commit": "d9683a6ba20b0e736ae9bf0215710e5132d8c233",
+ "dirty": false,
+ "spec": "showcases/twin-machines.toml",
+ "spec_sha256": "7f4b29b5f3906bd2937c525a64e9b17d91a8b063e3e6bea2643829db4e1472b6",
+ "ran_at": "2026-11-09T19:27:57",
+ "credits": [
+  "coordinator with ChatGPT Pro P6: economy v1 and the recovery lab (#819, #829)",
+  "lf-tooling: replay runner"
+ ],
+ "numbers": {
+  "identical": {
+   "label": "runs with byte-identical events",
+   "value": 7,
+   "unit": "of 7",
+   "source": "re-run here against docs/programmes/systems/research/pro/P6/recovery/measured.csv"
+  },
+  "here": {
+   "label": "re-run on",
+   "value": "Windows 11, Intel64 Family 6 Model 183 Stepping 1, GenuineIntel, Python 3.14.3",
+   "unit": "",
+   "source": "platform"
+  },
+  "recorded_on": {
+   "label": "recorded on",
+   "value": "Linux x86-64, AMD EPYC sandbox, CPython 3.13.5 (#829)",
+   "unit": "",
+   "source": "docs/programmes/systems/research/pro/P6/recovery/measured.csv"
+  },
+  "sim_s": {
+   "label": "simulation time here",
+   "value": 589.6,
+   "unit": "s",
+   "source": "light lease",
+   "volatile": true
+  }
+ },
+ "media": {
+  "replay.svg": {
+   "sha256": "1e48d0390be4d532ebff85202be7c3cb76fed9fd59e27dc4a5b764431fef5b6f",
+   "bytes": 4817
+  },
+  "replay.json": {
+   "sha256": "f2156316ad21ad0bb9172f3a2a52da54b9b74ba0d6d899dca6d1814b7acc51da",
+   "bytes": 1939
+  }
+ },
+ "thumb": "replay.svg",
+ "pages": [],
+ "state_hash": "a3b334d39b5e132d",
+ "runner": "replay",
+ "subject": null,
+ "lease": "light where timed",
+ "timing_s": 590.48
+}
