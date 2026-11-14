@@ -117,8 +117,8 @@ footer{margin-top:24px}
 .filters label{display:flex;align-items:center;gap:5px;cursor:pointer;color:var(--muted)}
 .filters input{margin:0;accent-color:var(--lumen)}.filters label:has(input:checked){color:var(--lumen)}
 .depth:has(#filter-clips:checked)+.feed>.en:not(.result,.clip,.pair,.broke,.open),
-.depth:has(#filter-models:checked)+.feed>.en:not(.model),
-.depth:has(#filter-demos:checked)+.feed>.en:not(.try),
+.depth:has(#filter-models:checked)+.feed>.en:not(.model,.t-models),
+.depth:has(#filter-demos:checked)+.feed>.en:not(.try,.t-demos),
 .depth:has(#filter-numbers:checked)+.feed>.en:not(.big,.fact),
 .depth:has(#filter-logs:checked)+.feed>.en:not(.daily,.week,.diary){display:none}
 .day-divider{grid-column:1/-1;font:500 .82rem/1.4 var(--mono);color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px}

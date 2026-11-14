@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lumenfold · Swarm / WebAssembly</title>
+<style>
+  :root{color-scheme:dark;font:15px/1.5 system-ui,sans-serif;background:#080f1a;color:#e7eef5}
+  *{box-sizing:border-box}body{margin:0}main{max-width:1500px;margin:auto;padding:24px}
+  header{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}
+  h1{font-size:clamp(24px,4vw,40px);font-weight:500;letter-spacing:-.04em;margin:0}
+  .eyebrow{color:#71dcc4;text-transform:uppercase;letter-spacing:.18em;font-size:11px;margin:0 0 5px}
+  .muted{color:#9baec1}header p{margin:0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px}
+  .viewport{position:relative;min-height:540px;overflow:hidden;border:1px solid #25364a;border-radius:14px;background:#080f1a}
+  canvas{display:block;width:100%;height:100%;position:absolute;inset:0;touch-action:none;cursor:crosshair}
+  .hud{position:absolute;pointer-events:none;left:18px;top:14px;font:13px ui-monospace,monospace;color:#a0b6cb}
+  .hint{position:absolute;pointer-events:none;bottom:12px;left:18px;right:18px;color:#a0b6cb;font-size:12px}
+  aside{display:flex;flex-direction:column;gap:14px}.card{border:1px solid #25364a;border-radius:14px;padding:18px;background:#101b29}
+  h2{font-size:14px;font-weight:600;margin:0 0 10px}.card p{margin:8px 0;font-size:13px}
+  button{font:inherit;color:#e7eef5;border:1px solid #36516a;border-radius:7px;background:#192c40;padding:8px 12px;cursor:pointer}
+  button:hover{background:#254159}button:focus-visible,input:focus-visible{outline:2px solid #71dcc4;outline-offset:3px}
+  button:disabled{opacity:.5;cursor:wait}.buttons{display:flex;flex-wrap:wrap;gap:7px}.buttons button{flex:1}
+  button[aria-pressed=true]{border-color:#71dcc4;color:#71dcc4}input[type=range]{width:100%;accent-color:#71dcc4;margin:12px 0}
+  label{display:flex;justify-content:space-between}output,code{font-family:ui-monospace,monospace}
+  .hash{display:block;overflow-wrap:anywhere;font-size:14px;color:#d4e7f3}.equal{color:#71dcc4}.bad{color:#ff9d94}
+  #status{margin-top:14px;min-height:1.5em;font-size:13px}#probe-log{max-height:150px;overflow:auto;white-space:pre-wrap;font-size:11px;margin-bottom:0}
+  footer{margin-top:18px;font-size:12px;color:#8197ad}@media(max-width:850px){.layout{grid-template-columns:1fr}.viewport{min-height:55vh}aside{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}header{align-items:start;flex-direction:column}}
+</style>
+<main>
+  <header>
+    <div><p class="eyebrow">Lumenfold / engine experiment 01</p><h1>A swarm, in your browser.</h1></div>
+    <p class="muted">Real C++ core · one CPU thread · WebAssembly</p>
+  </header>
+  <div class="layout">
+    <section class="viewport" aria-label="Interactive formation swarm">
+      <canvas id="scene" tabindex="0" aria-label="Hold pointer to attract agents; right-click to scatter. Shape and scatter buttons are also available."></canvas>
+      <div class="hud"><span id="fps">—</span> fps · <span id="agents">20,000</span> agents · <span id="ticks">0</span> steps</div>
+      <div class="hint">Hold to attract · right-click to scatter · choose a shape to reform</div>
+    </section>
+    <aside>
+      <section class="card">
+        <h2>Play with the formation</h2>
+        <label for="count">Agents <output id="count-label" for="count">20,000</output></label>
+        <input id="count" type="range" min="1000" max="200000" step="1000" value="20000" disabled>
+        <div class="buttons" id="shapes">
+          <button data-shape="1" aria-pressed="true" disabled>Sword</button>
+          <button data-shape="2" aria-pressed="false" disabled>Dragon</button>
+          <button data-shape="3" aria-pressed="false" disabled>Hand</button>
+          <button data-shape="0" aria-pressed="false" disabled>Disk</button>
+        </div>
+        <div class="buttons" style="margin-top:8px"><button id="scatter" disabled>Scatter</button><button id="pause" disabled>Pause</button></div>
+        <p class="muted">Fixed 30 Hz core steps. Every agent is simulated; points show the core's positions.</p>
+      </section>
+      <section class="card">
+        <h2>Same seed. Same bits?</h2>
+        <p class="muted">Seed 1234 · 20,000 agents · 600 steps<br>Sword → dragon after step 300</p>
+        <p>Native C++ <code class="hash" id="native-hash">—</code></p>
+        <p>Browser wasm <code class="hash" id="wasm-hash">Not run</code></p>
+        <p id="verdict" role="status">Run the replay to compare.</p>
+        <button id="verify" disabled>Verify replay</button>
+      </section>
+      <section class="card">
+        <h2>Find this browser's ceiling</h2>
+        <p id="load" class="muted">Loading wasm…</p>
+        <button id="ceiling" disabled>Find 60 fps ceiling</button>
+        <p class="muted">Moving sword, 30 Hz simulation. Each count: 1.5 s warmup + 4 s sample. Pass: ≥59.5 fps, p95 frame ≤18.5 ms, zero dropped steps.</p>
+        <p id="ceiling-result" role="status"></p>
+        <pre id="probe-log"></pre>
+      </section>
+    </aside>
+  </div>
+  <p id="status" role="status">Starting the core…</p>
+  <footer>Standalone spike · no workers, SharedArrayBuffer, framework or external requests · hash covers agent positions and velocities</footer>
+</main>
+<script src="swarm.js" defer></script>
+<script src="main.js" defer></script>
+</html>
