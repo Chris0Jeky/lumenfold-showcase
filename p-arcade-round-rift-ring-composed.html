@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Arcade round · Lumenfold lab</title><meta property="og:type" content="article"><meta property="og:site_name" content="Lumenfold lab"><meta property="og:title" content="Arcade round · 11 Nov"><meta property="og:description" content="a 60-second round. in a test run a bot downs four enemies and breaks five props"><meta property="og:url" content="https://chris0jeky.github.io/lumenfold-showcase/p-arcade-round-rift-ring-composed.html"><meta property="og:image" content="https://chris0jeky.github.io/lumenfold-showcase/media/rift-ring-composed/3c295e48ab/poster.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="a 60-second round. in a test run a bot downs four enemies and breaks five props"><style>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Arcade round · Lumenfold lab</title><script>document.documentElement.classList.add('js')</script><meta property="og:type" content="article"><meta property="og:site_name" content="Lumenfold lab"><meta property="og:title" content="Arcade round · 11 Nov"><meta property="og:description" content="a 60-second round. in a test run a bot downs four enemies and breaks five props"><meta property="og:url" content="https://chris0jeky.github.io/lumenfold-showcase/p-arcade-round-rift-ring-composed.html"><meta property="og:image" content="https://chris0jeky.github.io/lumenfold-showcase/media/rift-ring-composed/3c295e48ab/poster.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="a 60-second round. in a test run a bot downs four enemies and breaks five props"><style>
 :root{--ink:#0e1120;--panel:#161a2c;--line:#2a2f4a;--text:#ebe8e0;--muted:#9ba1b9;--lumen:#f2b84b;--data:#7fd3e6;--miss:#ff8a7a;
 --plate:#f6f4ef;--display:"Unbounded","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
 --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;color-scheme:dark}
@@ -121,6 +121,8 @@ footer{margin-top:24px}
 .depth:has(#filter-demos:checked)+.feed>.en:not(.try,.t-demos),
 .depth:has(#filter-numbers:checked)+.feed>.en:not(.big,.fact),
 .depth:has(#filter-logs:checked)+.feed>.en:not(.daily,.week,.diary){display:none}
+.later{grid-column:1/-1;margin:0;font:500 .9rem/1.4 var(--mono)}.pager{display:flex;gap:18px;padding:22px 0;font:500 .85rem/1 var(--mono)}
+html:not(.js) video.auto{display:none}
 .day-divider{grid-column:1/-1;font:500 .82rem/1.4 var(--mono);color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px}
 .feed{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 22px;padding-top:28px}
 .en{grid-column:span 6;display:grid;gap:10px;align-content:start;min-width:0;margin:0}
@@ -143,10 +145,13 @@ a.det{font:500 .75rem/1 var(--mono);color:var(--muted);justify-self:start}
 .tech table td:first-child{width:62%}
 .back{font:500 .82rem/1 var(--mono);color:var(--muted)}
 @media (max-width:760px){.feed{grid-template-columns:minmax(0,1fr);gap:30px}.en,.en.square,.en.strip,.en.third{grid-column:auto}}
-</style></head><body><div class=wrap><nav></nav><p><a class="back" href="index.html">← devlog</a></p><div class="feed"><article class="en clip square" id="arcade-round-rift-ring-composed"><p class="eh"><a class="perma" href="p-arcade-round-rift-ring-composed.html"><b>Arcade round</b></a> · 11 Nov</p><div class="screen"><video class="auto" preload="none" src="media/rift-ring-composed/3c295e48ab/clip.mp4" poster="media/rift-ring-composed/3c295e48ab/poster.jpg" muted loop playsinline aria-label="a fighter faces enemies in a ring of pillars"></video></div><ul class="ln"><li><span class="k add">+</span>a 60-second round. in a test run a bot downs four enemies and breaks five props</li></ul><a class="det" href="d-rift-ring-composed.html">numbers and method</a></article></div></div><script>
-(function(){var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-var vids=[].slice.call(document.querySelectorAll("video.auto"));vids.forEach(function(v){v.muted=true;if(reduce)v.controls=true;});
-if(reduce||!("IntersectionObserver" in window))return;
-var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var p=x.target.play();if(p&&p.catch)p.catch(function(){x.target.controls=true;});}else x.target.pause();});},{threshold:.25});
-vids.forEach(function(v){io.observe(v);});})();
+</style></head><body><div class=wrap><nav></nav><p><a class="back" href="index.html">← devlog</a></p><div class="feed"><article class="en clip square" id="arcade-round-rift-ring-composed"><p class="eh"><a class="perma" href="p-arcade-round-rift-ring-composed.html"><b>Arcade round</b></a> · 11 Nov</p><div class="screen"><video class="auto" preload="none" data-src="media/rift-ring-composed/3c295e48ab/clip.mp4" data-poster="media/rift-ring-composed/3c295e48ab/poster.jpg" width="960" height="540" muted loop playsinline aria-label="a fighter faces enemies in a ring of pillars"></video><noscript><video controls preload="none" src="media/rift-ring-composed/3c295e48ab/clip.mp4" poster="media/rift-ring-composed/3c295e48ab/poster.jpg" width="960" height="540" muted loop playsinline aria-label="a fighter faces enemies in a ring of pillars"></video></noscript></div><ul class="ln"><li><span class="k add">+</span>a 60-second round. in a test run a bot downs four enemies and breaks five props</li></ul><a class="det" href="d-rift-ring-composed.html">numbers and method</a></article></div></div><script>
+(function(){document.documentElement.classList.add("js");
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches,io="IntersectionObserver" in window;
+function load(v){var s=v.getAttribute("data-src");if(!s)return;var p=v.getAttribute("data-poster");if(p)v.poster=p;v.src=s;v.removeAttribute("data-src");}
+var near=io&&new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){load(x.target);near.unobserve(x.target);}});},{rootMargin:"600px 0px"});
+var play=io&&!reduce&&new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;if(x.isIntersecting){load(v);var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();});},{threshold:.25});
+window.lumenWatch=function(root){[].forEach.call(root.querySelectorAll("video.auto"),function(v){v.muted=true;if(reduce)v.controls=true;
+if(!io){load(v);return;}near.observe(v);if(play)play.observe(v);});};
+window.lumenWatch(document);})();
 </script></body></html>

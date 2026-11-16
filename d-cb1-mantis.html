@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Five mantises</title><style>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Five mantises</title><script>document.documentElement.classList.add('js')</script><style>
 :root{--ink:#0e1120;--panel:#161a2c;--line:#2a2f4a;--text:#ebe8e0;--muted:#9ba1b9;--lumen:#f2b84b;--data:#7fd3e6;--miss:#ff8a7a;
 --plate:#f6f4ef;--display:"Unbounded","Segoe UI",system-ui,sans-serif;--body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
 --mono:"IBM Plex Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;color-scheme:dark}
@@ -121,6 +121,8 @@ footer{margin-top:24px}
 .depth:has(#filter-demos:checked)+.feed>.en:not(.try,.t-demos),
 .depth:has(#filter-numbers:checked)+.feed>.en:not(.big,.fact),
 .depth:has(#filter-logs:checked)+.feed>.en:not(.daily,.week,.diary){display:none}
+.later{grid-column:1/-1;margin:0;font:500 .9rem/1.4 var(--mono)}.pager{display:flex;gap:18px;padding:22px 0;font:500 .85rem/1 var(--mono)}
+html:not(.js) video.auto{display:none}
 .day-divider{grid-column:1/-1;font:500 .82rem/1.4 var(--mono);color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px}
 .feed{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:34px 22px;padding-top:28px}
 .en{grid-column:span 6;display:grid;gap:10px;align-content:start;min-width:0;margin:0}
@@ -143,10 +145,13 @@ a.det{font:500 .75rem/1 var(--mono);color:var(--muted);justify-self:start}
 .tech table td:first-child{width:62%}
 .back{font:500 .82rem/1 var(--mono);color:var(--muted)}
 @media (max-width:760px){.feed{grid-template-columns:minmax(0,1fr);gap:30px}.en,.en.square,.en.strip,.en.third{grid-column:auto}}
-</style></head><body><div class=wrap><nav></nav><p><a class="back" href="index.html">← devlog</a></p><article class="detail"><div class="screen"><img src="media/cb1-mantis/5ce249e560/poster.jpg" alt="Five mantises" loading="lazy"></div><h1>Five mantises</h1><section class="tech"><h2>numbers and method</h2><table><tr><td>minutes each model had for the task</td><td class="v">90</td></tr></table><p class="unverified"><em>Not shown yet:</em> Preview stills only. The model names stay hidden until the clips are judged.</p><p class="muted">2026-11-15</p></section></article></div><script>
-(function(){var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-var vids=[].slice.call(document.querySelectorAll("video.auto"));vids.forEach(function(v){v.muted=true;if(reduce)v.controls=true;});
-if(reduce||!("IntersectionObserver" in window))return;
-var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){var p=x.target.play();if(p&&p.catch)p.catch(function(){x.target.controls=true;});}else x.target.pause();});},{threshold:.25});
-vids.forEach(function(v){io.observe(v);});})();
+</style></head><body><div class=wrap><nav></nav><p><a class="back" href="index.html">← devlog</a></p><article class="detail"><div class="screen"><img src="media/cb1-mantis/5ce249e560/poster.jpg" alt="Five mantises" width="1400" height="1003" loading="lazy" decoding="async"></div><h1>Five mantises</h1><section class="tech"><h2>numbers and method</h2><table><tr><td>minutes each model had for the task</td><td class="v">90</td></tr></table><p class="unverified"><em>Not shown yet:</em> Preview stills only. The model names stay hidden until the clips are judged.</p><p class="muted">2026-11-15</p></section></article></div><script>
+(function(){document.documentElement.classList.add("js");
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches,io="IntersectionObserver" in window;
+function load(v){var s=v.getAttribute("data-src");if(!s)return;var p=v.getAttribute("data-poster");if(p)v.poster=p;v.src=s;v.removeAttribute("data-src");}
+var near=io&&new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){load(x.target);near.unobserve(x.target);}});},{rootMargin:"600px 0px"});
+var play=io&&!reduce&&new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;if(x.isIntersecting){load(v);var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}else v.pause();});},{threshold:.25});
+window.lumenWatch=function(root){[].forEach.call(root.querySelectorAll("video.auto"),function(v){v.muted=true;if(reduce)v.controls=true;
+if(!io){load(v);return;}near.observe(v);if(play)play.observe(v);});};
+window.lumenWatch(document);})();
 </script></body></html>
