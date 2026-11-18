@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" font-family="Segoe UI, sans-serif">
+<rect width="960" height="540" fill="#14161b"/>
+<text x="40" y="56" fill="#f2f2f2" font-size="28">Crowd GPU time, real time, p50 (ms)</text>
+<text x="40" y="88" fill="#9aa0aa" font-size="17">Unreal 5.8, RX 9070 XT, same mesh and walk; bars: bone-animated, vertex-animated LODs 2-4, no animation</text>
+<text x="40" y="208" fill="#f2f2f2" font-size="20">100k high</text>
+<rect x="250" y="140" width="590.0" height="34" fill="#d9734a"/>
+<text x="848.0" y="164" fill="#f2f2f2" font-size="18">30.5 bone</text>
+<rect x="250" y="180" width="325.6" height="34" fill="#4fb3a9"/>
+<text x="583.6" y="204" fill="#f2f2f2" font-size="18">16.8 vertex</text>
+<rect x="250" y="220" width="207.1" height="34" fill="#5b6170"/>
+<text x="465.1" y="244" fill="#f2f2f2" font-size="18">10.7 static</text>
+<text x="40" y="350" fill="#f2f2f2" font-size="20">30k high</text>
+<rect x="250" y="282" width="228.0" height="34" fill="#d9734a"/>
+<text x="486.0" y="306" fill="#f2f2f2" font-size="18">11.8 bone</text>
+<rect x="250" y="322" width="143.4" height="34" fill="#4fb3a9"/>
+<text x="401.4" y="346" fill="#f2f2f2" font-size="18">7.4 vertex</text>
+<rect x="250" y="362" width="104.2" height="34" fill="#5b6170"/>
+<text x="362.2" y="386" fill="#f2f2f2" font-size="18">5.4 static</text>
+<text x="40" y="492" fill="#f2f2f2" font-size="20">30k over the shoulder</text>
+<rect x="250" y="424" width="311.3" height="34" fill="#d9734a"/>
+<text x="569.3" y="448" fill="#f2f2f2" font-size="18">16.1 bone</text>
+<rect x="250" y="464" width="281.4" height="34" fill="#4fb3a9"/>
+<text x="539.4" y="488" fill="#f2f2f2" font-size="18">14.5 vertex</text>
+<rect x="250" y="504" width="183.8" height="34" fill="#5b6170"/>
+<text x="441.8" y="528" fill="#f2f2f2" font-size="18">9.5 static</text>
+</svg>
