@@ -144,7 +144,21 @@ a.det{font:500 .75rem/1 var(--mono);color:var(--muted);justify-self:start}
 .tech{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:20px}.tech h2{font-size:1rem}
 .tech table td:first-child{width:62%}
 .back{font:500 .82rem/1 var(--mono);color:var(--muted)}
-@media (max-width:760px){.feed{grid-template-columns:minmax(0,1fr);gap:30px}.en,.en.square,.en.strip,.en.third{grid-column:auto}}
+.band{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding:22px 0}
+.fcard{display:grid;gap:8px;align-content:start;min-width:0;color:inherit;text-decoration:none;border-top:3px solid var(--lumen);padding-top:10px}
+.fcard:first-child{grid-column:1/-1}.fcard h2{font-size:clamp(1.3rem,4vw,2rem);line-height:1.1}.fcard p{margin:0;color:var(--muted)}
+.fcard:hover h2{color:var(--lumen)}
+.counts{display:flex;flex-wrap:wrap;gap:6px 26px;margin:0;padding:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.counts div{display:grid}.counts dt{font:500 .72rem/1.2 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.counts dd{margin:0;font:600 1.6rem/1.1 var(--display);color:var(--text)}
+.feature{display:grid;gap:34px}.feature>header{display:grid;gap:12px}.feature h1{font-size:clamp(1.8rem,6vw,3rem);line-height:1.05}
+.toc{display:flex;flex-wrap:wrap;gap:4px 14px;font:500 .82rem/1.4 var(--mono)}
+.fs{display:grid;gap:12px;border-top:1px solid var(--line);padding-top:18px;min-width:0}.fs h2{font-size:clamp(1.2rem,4vw,1.7rem)}
+.stills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}.stills img{width:100%;height:auto;display:block}
+.chart{display:grid;gap:6px;margin:0}.chart h3{font:600 .9rem/1.3 var(--mono);color:var(--text)}.chart svg{width:100%;height:auto;max-width:760px}
+.chart .bl{fill:var(--muted);font:500 13px var(--mono)}.chart .bv{fill:var(--text);font:600 13px var(--mono)}.chart .bb{fill:var(--lumen)}
+.chart .bt{fill:var(--line)}
+@media (max-width:760px){.band{grid-template-columns:minmax(0,1fr)}.feed{grid-template-columns:minmax(0,1fr);gap:30px}.en,.en.square,.en.strip,.en.third{grid-column:auto}}
 </style></head><body><div class=wrap><nav></nav><p><a class="back" href="index.html">← devlog</a></p><article class="detail"><div class="screen"><video controls preload="metadata" src="media/prop-wolf/d83c066dc3/clip.mp4" poster="media/prop-wolf/d83c066dc3/poster.jpg" width="480" height="480" muted loop playsinline aria-label="Wolf"></video></div><h1>Wolf</h1><section class="tech"><h2>numbers and method</h2><table><tr><td>triangles in the mesh, as generated (not reduced)</td><td class="v">1,895,689</td></tr></table><p class="unverified"><em>Not shown yet:</em> as generated, not reduced or retextured; not placed in a game scene; rendered on the CPU at 480 px</p><p class="muted">2026-11-14</p></section></article></div><script>
 (function(){document.documentElement.classList.add("js");
 var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches,io="IntersectionObserver" in window;
